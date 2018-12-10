@@ -12,8 +12,11 @@
       image_en_cours = image_en_cours + 1;
       if (image_en_cours == mesphotos.length) {
         image_en_cours = 0;
+       
       }
       document.getElementById('ecran').src = mesphotos[image_en_cours];
+      document.getElementById('ecran').src = mesphotos1[image_en_cours];
+       document.getElementById('ecran').src = mesphotos2[image_en_cours];
     }
     function precedente () {
       image_en_cours = image_en_cours - 1;
@@ -21,6 +24,8 @@
         image_en_cours = mesphotos.length-1;
       }
       document.getElementById('ecran').src = mesphotos[image_en_cours];
+      document.getElementById('ecran1').src = mesphotos[image_en_cours];
+      document.getElementById('ecran2').src = mesphotos[image_en_cours];
     }
   </script>
 </head>
@@ -30,15 +35,50 @@
   <h1>Actions utilisateur et JavaScript</h1>
 
   <h2>Diaporama manuel</h2>
-
-  <div class="illustration">
+  <table border=1>
+  
+    <tr>
+      <td>
+          
+            <div class="illustration">
   <img id="ecran" src="http://www.dawan.tv/images/html5.jpg" alt="html" height="200" />
   </div>
   
-  <button onclick="precedente();" ontype="button" class="btn btn-danger btn-xs">image précédente</button>
+  
+  </table>
+        
+        </td>
+        <td>
+          
+            <div class="illustration">
+  <img id="ecran1" src="http://www.dawan.tv/images/html5.jpg" alt="html" height="200" />
+  </div>
+  
+  </table>
+        
+        </td>
+        
+        
+        <td>
+          
+            <div class="illustration">
+  <img id="ecran2" src="http://www.dawan.tv/images/html5.jpg" alt="html" height="200" />
+  </div>
+  
+  </table>
+        
+        </td>
+        
+        
+   
+    </tr>
+    
+
+    <button onclick="precedente();" ontype="button" class="btn btn-danger btn-xs">image précédente</button>
   
 
   <button onclick="suivante();" ontype="button" class="btn btn-warning btn-lg">image suivante</button>
+  
 
   </body>
 </html>
